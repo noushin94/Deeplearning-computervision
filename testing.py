@@ -6,7 +6,6 @@ import tensorflow
 from tensorflow import keras
 from keras.datasets import mnist
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.preprocessing import LabelEncoder
 
 
 (x_train,y_train) , (x_test, y_test) = mnist.load_data()
@@ -33,13 +32,9 @@ for img in x_test:
 x_train_f =np.array(x_train_r)
 x_test_f = np.array(x_test_r)
 
-label_encoder = LabelEncoder()
-y_train_f = label_encoder.fit_transform(y_train)
-y_test_f = label_encoder.transform(y_test)
-    
-
 model = KNeighborsClassifier(n_neighbors= 5, weights= "uniform")
 
-model.fit(x_train_f, y_train_f)
+
+model.fit(x_train_f, y_train)
 
 y_predict = model.predict(x_test_f)

@@ -5,6 +5,7 @@ import glob
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
+import joblib
 
 
 
@@ -46,3 +47,5 @@ ml.fit(X_train, Y_train)
 accuracy = ml.score(X_test, Y_test)
 
 print("accuracy: {:.2f}".format(accuracy*100))
+
+joblib.dump(ml, 'kneigbour.pkl')

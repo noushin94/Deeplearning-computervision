@@ -3,7 +3,7 @@ import numpy as np
 
 img = cv2.imread("/Users/noushinahmadvand/Documents/myExercising/Lenna_(test_image).png")
 
-# for vretical edges
+# for vertical edges
 kernel = np.array([[-1],[1]])
 #for horizontal edges
 kernel2 = np.array([[1,-1]])

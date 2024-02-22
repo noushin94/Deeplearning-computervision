@@ -40,8 +40,4 @@ cv2.putText(img , text , (10,30), cv2.FONT_HERSHEY_PLAIN, 1.0, (0,255,0), 3)
 
 cv2.imshow("image", img)
 cv2.waitkey(0)
-
-
-
-                  
-
+           

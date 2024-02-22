@@ -73,11 +73,14 @@ net.compile(optimizer= "SGD",
 h = net.fit(X_train,Y_train, batch_size=32, validation_data= (X_test, Y_test), epochs = 10)
 
 
+loss , acc = net.evaluate(X_test, Y_test) # it by itself evaluate main y and compare it with y predict
+
+net.save("mlp1.h5")
+
+
 plt.plot(h.history["accuracy"], label = "train accuracy" )
 plt.plot(h.history["val_accuracy"], label = "test accuracy")
-
 plt.plot(h.history["loss"], label = "train_accuracy" )
-
 plt.plot(h.history["val_loss"], label = "test accuracy")
 plt.legend()
 plt.xlabel("epoch")

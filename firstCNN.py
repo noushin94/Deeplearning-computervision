@@ -75,6 +75,8 @@ net.compile(optimizer= "SGD",
         metrics = ["accuracy"])
 
 
+
+
 h = net.fit(X_train,Y_train, batch_size=32, validation_data= (X_test, Y_test), epochs = 10)
 
 
